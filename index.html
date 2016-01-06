@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NASA</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+	
+
+var url = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=yyF5l3ZFl7GwTxzgDHYa3NALiHADwBKtCqGXkfLF";
+
+
+$.ajax({
+  url: url,
+  success: handleResult
+});
+function handleResult(result){
+  var data=new Array(result.photos)
+   for(var i=0;i<25;i++){
+   $("#reqObject"+i+"").attr("src",data[0][i].img_src)
+   }
+
+  
+
+  
+
+}
+
+</script>
+<!--  -->
+<body>
+  <b>IMAGES FROM ROVER</b><BR>
+ 
+ <img id='reqObject0' src='' width='200' height='200'>
+ <img id='reqObject1' src='' width='200' height='200'>
+ <img id='reqObject2' src='' width='200' height='200'>
+ <img id='reqObject3' src='' width='200' height='200'>
+ <img id='reqObject4' src='' width='200' height='200'>
+ <img id='reqObject5' src='' width='200' height='200'>
+ <img id='reqObject6' src='' width='200' height='200'>
+ <img id='reqObject7' src='' width='200' height='200'>
+ <img id='reqObject8' src='' width='200' height='200'>
+ <img id='reqObject9' src='' width='200' height='200'>
+ <img id='reqObject10' src='' width='200' height='200'>
+ <img id='reqObject11' src='' width='200' height='200'>
+ <img id='reqObject12' src='' width='200' height='200'>
+ <img id='reqObject13' src='' width='200' height='200'>
+ <img id='reqObject14' src='' width='200' height='200'>
+ <img id='reqObject15' src='' width='200' height='200'>
+ <img id='reqObject16' src='' width='200' height='200'>
+ <img id='reqObject17' src='' width='200' height='200'>
+ <img id='reqObject18' src='' width='200' height='200'>
+ <img id='reqObject19' src='' width='200' height='200'>
+ <img id='reqObject20' src='' width='200' height='200'>
+ <img id='reqObject21' src='' width='200' height='200'>
+ <img id='reqObject22' src='' width='200' height='200'>
+ <img id='reqObject23' src='' width='200' height='200'>
+ <img id='reqObject24' src='' width='200' height='200'>
+ <img id='reqObject25' src='' width='200' height='200'>
+ 
+</body>
+</html>
